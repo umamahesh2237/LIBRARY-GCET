@@ -53,7 +53,8 @@ if (isset($_POST['search'])) {
 	<div class="sideMenu" id="side-menu">
 		<a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
 		<div class="main-menu"> 
-      <a href="cat1.html"><i class="fa-solid fa-book"></i>Category Wise Books</a> 
+		<a href="BookSearch.php"><i class="fa-solid fa-search"></i>Book Search</a>
+      <a href="cse.php"><i class="fa-solid fa-book"></i>Category Wise Books</a> 
       <a href="AboutGCET.html"><i class="fa-solid fa-circle-info"></i>About GCET Library</a> 
       <a href="AboutProject.html"><i class="fa-solid fa-users"></i>About this Project</a> 
       <a href="ContactGCET.html"><i class="fa-solid fa-user"></i>Contact Library Department</a> 
@@ -77,13 +78,13 @@ if (isset($_POST['search'])) {
 			  <div class="input-group-append">
 				<button class="btn btn-warning btn-lg" type="submit" name="search"><i class="fa fa-search"></i></button>
                <!-- <input type="submit" name="search" class="btn btn-warning btn-lg"><i class="fa fa-search"></i></input> -->
-			  </div><br><br>
+			  </div>
             </div>
 			<div class="mb-3">
             <label for="qy" class="col-cm-2 col-form-label text-black"><h4>Book Name:</h4></label>
 				<div class="col-sm-8" >
                 <input type="text" name="quantity" id="quantity" style="width: 500px;" value='<?php echo isset($bookName) ? $bookName : 'NOT FOUND'; ?>' readonly>
-				</div>
+				</div> <br>
 				<label for="qy" class="col-cm-2 col-form-label text-black"><h4>Quantity:</h4></label>
 				<div class="col-sm-8" >
                 <input type="text" name="quantity" id="quantity" value='<?php echo isset($remainingQuantity) ? $remainingQuantity : 'NOT FOUND'; ?>' readonly>
