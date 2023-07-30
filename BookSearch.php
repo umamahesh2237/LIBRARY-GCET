@@ -47,6 +47,22 @@ if (isset($_POST['search'])) {
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script>
+	function openNav() {
+	 document.getElementById("side-menu").style.width = "300px";
+	 document.getElementById("content-area").style.marginLeft = "300px"; 
+	}
+
+	function closeNav() {
+	 document.getElementById("side-menu").style.width = "0";
+	 document.getElementById("content-area").style.marginLeft= "0";  
+	}
+
+	function LoginPage() {
+		console.log("hi");
+		window.location.href="LoginPage.html";
+	}
+	</script>
 </head>
 <body>
 	<form method="post">
@@ -58,26 +74,21 @@ if (isset($_POST['search'])) {
       <a href="AboutGCET.html"><i class="fa-solid fa-circle-info"></i>About GCET Library</a> 
       <a href="AboutProject.html"><i class="fa-solid fa-users"></i>About this Project</a> 
       <a href="ContactGCET.html"><i class="fa-solid fa-user"></i>Contact Library Department</a> 
-      
 		</div>
 	</div>
 	<div id="content-area">
 		<span onclick="openNav()" style="font-size:30px;cursor:pointer">☰ </span>
-		<!-- <button id="qwe"> Logout</button> -->
-		<button class="logout-btn btn btn-primary" onclick="LoginPage()" id="qwe"><i class="fa-solid fa-power-off"></i>&nbsp;&nbsp;Logout</button>
+		<a href="LoginsPage.html"><h1 align="right" style="font-family:Itim; color:red;">LOGOUT</h1></a>
 	</div>
 	<div class="container">
     
 				<div class="row justify-content-center">
-			
 				   <div class="col-md-8">
-					<h1 align="center">Geethanjali College of Engineering and Technology Library</h1>
-					   
+					<h1 align="center">Geethanjali College of Engineering and Technology Library</h1>					   
 					   <div class="input-group mb-3">
 			  <input type="text" class="form-control input-text" placeholder="Search for a book..." name="book">
 			  <div class="input-group-append">
 				<button class="btn btn-warning btn-lg" type="submit" name="search"><i class="fa fa-search"></i></button>
-               <!-- <input type="submit" name="search" class="btn btn-warning btn-lg"><i class="fa fa-search"></i></input> -->
 			  </div>
             </div>
 			<div class="mb-3">
@@ -109,26 +120,6 @@ if (isset($_POST['search'])) {
 				</ul>
 			</div>
 		</footer>
-<script>
-	function openNav() {
-	 document.getElementById("side-menu").style.width = "300px";
-	 document.getElementById("content-area").style.marginLeft = "300px"; 
-	}
-
-	function closeNav() {
-	 document.getElementById("side-menu").style.width = "0";
-	 document.getElementById("content-area").style.marginLeft= "0";  
-	}
-
-	function LoginPage() {
-		console.log("hi");
-		window.location.href="LoginPage.html";
-	}
-	const button=document.getElementById("qwe");
-	button.addEventListener('click',function(){
-		window.location.href="LoginPage.html";
-	});
-	</script>
 	</form>
 </body>
 </html>

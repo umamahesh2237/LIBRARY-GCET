@@ -91,7 +91,7 @@
 </div>
     <br>
     <div>
-	<h1 align="center">Category : Masters of Business Administration</h1>
+	<h1 align="center" style="font-family:Itim">Category : Masters of Business Administration</h1>
     <div>
         <table>
         <tr>
